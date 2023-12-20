@@ -6,16 +6,16 @@ def calcular_cateto(a, c):
     b = (c**2 - a**2)**0.5
     return b
 
-opcao = input("Escolha o que deseja calcular (hipotenusa/cateto): ").lower()
+opcao = input("Escolha o que deseja calcular (1 - hipotenusa / 2 - cateto): ")
 
-if opcao == "hipotenusa":
+if opcao == "1":
     cateto_a = float(input("Digite o cateto a: "))
     cateto_b = float(input("Digite o cateto b: "))
 
     hipotenusa = calcular_hipotenusa(cateto_a, cateto_b)
     print(f"A hipotenusa é: {hipotenusa:.1f}")
 
-elif opcao == "cateto":
+elif opcao == "2":
     cateto_conhecido = float(input("Digite o comprimento do cateto: "))
     hipotenusa = float(input("Digite o comprimento da hipotenusa: "))
 
@@ -26,4 +26,4 @@ elif opcao == "cateto":
         print("Por favor, insira valores válidos (não negativos) para os catetos e a hipotenusa.")
 
 else:
-    print("Opção inválida. Por favor, escolha 'hipotenusa' ou 'cateto'.")
+    print("Opção inválida. Por favor, escolha '1' para 'hipotenusa' ou '2' para 'cateto'.")
